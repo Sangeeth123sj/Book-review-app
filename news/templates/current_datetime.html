@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+
+{% block title %}Present time {% endblock %}
+{% block content %}
+<h2>Present Time </h2>
+<p>It is now {{ current_date }}.</p>
+	
+<h3>The books are:</h3>
+<ul>
+{% for b in books  %}
+	<li>{{b.id}})  <b>Title:</b> {{b}} <br>
+	<b>Description:</b> {{b.description}}  </li>
+
+	<form action="/edit/" method="post" action="edit/">
+	{% csrf_token %}
+		<input type="hidden" name='book' value="{{b.id}}">
+		<input type="hidden" name='name' value="{{b.book_name}}">
+		<input type="hidden" name='detail' value="{{b.description}}">
+		<div class="container">
+		
+			<button name='editer'type='submit' class="btn btn-primary">edit</button>
+			<button name='deleter' formaction='/delete/'type='submit'class="btn btn-warning" >delete</button>
+	</div>
+
+			
+	</form>
+
+
+		
+			
+
+	<br>
+
+{% endfor %}
+
+<img src="static/media/images/{{Book.image.url}}"  style="max-height:100px"/>
+
+
+{% load static %}
+
+<img src="{% static 'bookpics/AF.jpeg' %}">
+
+
+{% endblock %}

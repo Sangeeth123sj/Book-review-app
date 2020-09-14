@@ -1,0 +1,16 @@
+{% extends 'base.html'  %}
+
+{% block content %}
+<center>
+<form action="/delete/" method="get">
+
+<p>Enter id of book to be deleted {{book}}</p>
+<input type="text" name="d">
+<br><br>
+<input type="submit" value="Delete book" class="btn btn-primary">
+
+</form>
+</center>
+
+
+{% endblock %}

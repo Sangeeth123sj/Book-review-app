@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Result
+{% endblock %}
+
+{% block content %}
+		<p>The search word is {{query}} </p>
+
+		{% for book in books %}
+
+		<li> {{book.book_name}}, {{book.description}}</li>
+		{% endfor %}
+{% endblock %}

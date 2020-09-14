@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<form action="/search/" method="GET" >
+		<div class="form-group">
+			<center>
+			<input type="text" name="q" >
+			<input type="submit" value="Search" class="btn btn-primary">	
+			</center>
+		</div>
+	</form>
+
+{% endblock %}

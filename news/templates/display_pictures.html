@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for h in pics %}
+	{{h}}
+<p>	<img src="test/{{h}}" />  </p>
+<p>	<img src="/media/test/{{h.image.url}}" />  </p>	
+{% endfor %}
+
+
+{%  endblock %}
+
+

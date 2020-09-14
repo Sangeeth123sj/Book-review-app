@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+tubeload
+{% endblock %}
+
+{% block content %}
+	<form action="/download/" method="get">
+<h1>my own youtube downloader</h1>
+<input type="text" name="url">
+<input type="submit" name="download">
+	</form>
+{% endblock %}
+
